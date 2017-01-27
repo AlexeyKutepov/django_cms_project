@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block header %}
+    <header class="intro-header" style="background-image: url('{{ STATIC_URL }}img/contact-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>{% placeholder "title" %}</h1>
+                        <hr class="small">
+                        <span class="subheading">{% placeholder "sub_title" %}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock header %}
+
+{% block content %}
+	<div class="row">
+        <div class="col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="col-lg-6 col-sm-12 maincontent">
+                <h3>Контакты</h3>
+                <br>
+                <h5><i class="fa fa-envelope-o" aria-hidden="true"></i> {% placeholder "email" %}</h5>
+                <h5><i class="fa fa-skype" aria-hidden="true"></i> {% placeholder "skype" %}<br></h5>
+                <h5><i class="fa fa-phone" aria-hidden="true"></i> {% placeholder "phone" %}<br></h5>
+            </div>
+            <div class="col-lg-6 col-sm-12 maincontent">
+                <h3>Я в социальных сетях</h3>
+                <br>
+                <h5><i class="fa fa-vk" aria-hidden="true"></i> {% placeholder "vk" %}<br></h5>
+                <h5><i class="fa fa-facebook" aria-hidden="true"></i> {% placeholder "facebook" %}<br></h5>
+                <h5><i class="fa fa-linkedin" aria-hidden="true"></i> {% placeholder "linkedin" %}<br></h5>
+                <h5><i class="fa fa-github" aria-hidden="true"></i> {% placeholder "github" %}<br></h5>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
