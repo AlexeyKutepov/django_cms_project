@@ -148,6 +148,7 @@ INSTALLED_APPS = (
     'djangocms_text_ckeditor',
     'filer',
     'easy_thumbnails',
+    'reversion',
     'djangocms_column',
     'djangocms_link',
     'cmsplugin_filer_file',
