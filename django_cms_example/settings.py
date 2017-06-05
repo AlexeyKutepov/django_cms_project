@@ -160,6 +160,7 @@ INSTALLED_APPS = (
     'djangocms_googlemap',
     'djangocms_video',
     'django_cms_example',
+    'aldryn_disqus',
 )
 
 LANGUAGES = (
@@ -220,3 +221,6 @@ THUMBNAIL_PROCESSORS = (
     'easy_thumbnails.processors.filters',
     'easy_thumbnails.processors.background',
 )
+
+# Чтобы комментарии начали работать, вместо example нужно указать SHORTNAME для вашего сайта
+DISQUS_SHORTNAME = 'example'
