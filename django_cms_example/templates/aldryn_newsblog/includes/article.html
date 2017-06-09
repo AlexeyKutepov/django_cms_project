@@ -11,14 +11,14 @@
         </p>
     {% endif %}
 
-    {% if article.categories.exists %}
-        <p>
-            {% for category in article.categories.all %}
-                <a href="{% namespace_url 'article-list-by-category' category.slug namespace=namespace default='' %}">{{ category.name }}</a>
-                {% if not forloop.last %}, {% endif %}
-            {% endfor %}
-        </p>
-    {% endif %}
+{#    {% if article.categories.exists %}#}
+{#        <p>#}
+{#            {% for category in article.categories.all %}#}
+{#                <a href="{% namespace_url 'article-list-by-category' category.slug namespace=namespace default='' %}">{{ category.name }}</a>#}
+{#                {% if not forloop.last %}, {% endif %}#}
+{#            {% endfor %}#}
+{#        </p>#}
+{#    {% endif %}#}
 
     <h2>
         {% if not detail_view %}
@@ -30,15 +30,15 @@
 
     <p>{{ article.publishing_date|date }}</p>
 
-    {% include "aldryn_newsblog/includes/author.html" with author=article.author %}
+{#    {% include "aldryn_newsblog/includes/author.html" with author=article.author %}#}
 
-    {% if article.tags %}
-        <p>
-            {% for tag in article.tags.all %}
-                <a href="{% namespace_url 'article-list-by-tag' tag=tag.slug namespace=namespace default='' %}">{{ tag.name }}</a>
-            {% endfor %}
-        </p>
-    {% endif %}
+{#    {% if article.tags %}#}
+{#        <p>#}
+{#            {% for tag in article.tags.all %}#}
+{#                <a href="{% namespace_url 'article-list-by-tag' tag=tag.slug namespace=namespace default='' %}">{{ tag.name }}</a>#}
+{#            {% endfor %}#}
+{#        </p>#}
+{#    {% endif %}#}
 
     {% render_model article "lead_in" %}
 
